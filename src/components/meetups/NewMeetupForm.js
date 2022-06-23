@@ -4,7 +4,8 @@ import { useRef } from "react";
 import Card from '../ui/Card';
 import styles from './NewMeetupForm.module.css';
 
-function NewMeetupForm() {
+function NewMeetupForm(props) {
+  // Passing expected props into the function
   const titleInputRef = useRef();
   // Creating a variable that stores the React useRef function
   const imageInputRef = useRef();
@@ -28,8 +29,10 @@ function NewMeetupForm() {
       address: enteredAddress,
       description: enteredDescription,
     }
-    console.log(meetupData);
-    // To check if the entered data is passed correctly, we need to display it in the console first
+    // console.log(meetupData);
+    // // To check if the entered data is passed correctly, we need to display it in the console first
+    props.onAddMeetup(meetupData);
+    // Expecting the props to receive a function as a value, which in turn will receive meetupData
   }
   return (
     <Card>
