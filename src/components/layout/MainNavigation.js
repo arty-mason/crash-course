@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import styles from "./MainNavigation.module.css"
 
 function MainNavigation() {
   return (
-    <header>
-      <div>React Meetups</div>
+    <header className={styles.header}>
+      {/* Setting a dynamic class property that we will later on specify in css */}
+      <div className={styles.logo}>React Meetups</div>
       <nav>
         <ul>
           <li>
@@ -17,11 +19,10 @@ function MainNavigation() {
           </li>
           <li>
             <Link to="/favourites">My Favourites</Link>
-
           </li>
         </ul>
       </nav>
-    </header>
+    </header >
   )
 }
 
