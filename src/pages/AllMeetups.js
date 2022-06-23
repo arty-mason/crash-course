@@ -1,5 +1,4 @@
-import React from 'react'
-import MeetupList from '../components/meetups/MeetupList'
+import MeetupList from '../components/meetups/MeetupList';
 
 const DUMMY_DATA = [
   // Creating dummy data to be rendered on the page

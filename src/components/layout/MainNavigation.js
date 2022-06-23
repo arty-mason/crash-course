@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styles from "./MainNavigation.module.css"
+
+import { Link } from 'react-router-dom';
+import styles from "./MainNavigation.module.css";
 
 function MainNavigation() {
   return (
@@ -26,4 +26,4 @@ function MainNavigation() {
   )
 }
 
-export default MainNavigation
+export default MainNavigation;
