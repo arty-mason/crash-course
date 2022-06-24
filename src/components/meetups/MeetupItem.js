@@ -1,4 +1,3 @@
-import React from 'react';
 import Card from '../ui/Card';
 import styles from "./MeetupItem.module.css";
 import { useContext } from "react";
@@ -11,7 +10,7 @@ function MeetupItem(props) {
   const itemIsFavourite = favouritesCtx.itemIsFavourite(props.id);
   // Extracting the value out of the favouritesCtx variable using dot notation and attributing it to the variable
   // ? The block with useContext is a little confusing, needs clarification
-  function toggleFavouriteStatusHandler(props) {
+  function toggleFavouriteStatusHandler() {
     // Creating a function to handle the Favourites button with either adding or removing the item from Favourites
     if (itemIsFavourite) {
       // Checking if the item is already in the favourites
@@ -26,9 +25,9 @@ function MeetupItem(props) {
         address: props.address,
         // Otherwise, we create a new object to store it in favouritesCtx, dynamically attributing all the necessary key-value pairs;
       }
-      )
-    }
-  }
+      );
+    };
+  };
 
   return (
     <li className={styles.item}>
@@ -53,7 +52,7 @@ function MeetupItem(props) {
 
       </Card>
     </li>
-  )
-}
+  );
+};
 
 export default MeetupItem;

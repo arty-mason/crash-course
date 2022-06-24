@@ -15,7 +15,9 @@ function AllMeetupsPage() {
     // Setting the default value of the function to (true)
     fetch("https://react-crash-course-7cc99-default-rtdb.firebaseio.com/meetups.json")
       // Fetching the existing updated data from the Firebase API. Using it inside useEffect to prevent infinite loops
-      .then(response => response.json())
+      .then((response) => {
+        return response.json();
+      })
       // Converting the response data into into a JSON object
       .then(data => {
         const meetups = [];

@@ -47,15 +47,30 @@ function NewMeetupForm(props) {
         </div>
         <div className={styles.control}>
           <label htmlFor="title">Meetup Image</label>
-          <input type="url" required id="image" ref={imageInputRef} />
+          <input
+            type="url"
+            required
+            id="image"
+            ref={imageInputRef}
+          />
         </div>
         <div className={styles.control}>
           <label htmlFor="address">Address</label>
-          <input type="text" required id="address" ref={addressInputRef} />
+          <input
+            type="text"
+            required
+            id="address"
+            ref={addressInputRef}
+          />
         </div>
         <div className={styles.control}>
           <label htmlFor="description">Description</label>
-          <textarea id="description" required rows="5" ref={descriptionInputRef}></textarea>
+          <textarea
+            id="description"
+            required
+            rows="5"
+            ref={descriptionInputRef}>
+          </textarea>
           {/* In the textearea you can set the size of the box by specifying the number of rows */}
         </div>
         <div className={styles.actions}>
