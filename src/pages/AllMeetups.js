@@ -2,7 +2,6 @@ import MeetupList from '../components/meetups/MeetupList';
 import { useState, useEffect } from 'react';
 // Importing the useState and useEffect React Hooks
 
-
 function AllMeetupsPage() {
   const [isLoading, setIsLoading] = useState(true);
   // Using destructuring method to create variables on the state & state change, which we attribute to useState & set the default to (true)
